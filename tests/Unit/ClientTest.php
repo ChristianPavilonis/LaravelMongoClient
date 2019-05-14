@@ -31,9 +31,9 @@ class ClientTest extends TestCase
     /** @test */
     public function callMethod()
     {
-        dd($this->client->dropDatabase('sandbox'));
+        $result = $this->client->dropDatabase('sandbox');
+
+        $this->assertEquals(1, $result->ok);
     }
-
-
 
 }
